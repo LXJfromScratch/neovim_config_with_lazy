@@ -29,5 +29,3 @@ then
 else
   MyColor('rose-pine')
 end
-
-
