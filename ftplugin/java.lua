@@ -4,6 +4,8 @@ if root_dir == "" then
   return
 end
 
+-- local home = os.getenv("HOME")
+-- local workspace_dir = home .. "/Workspace/projects/" .. project_name
 local nvim_data = vim.fn.stdpath("data") .. '/'
 local project_name = vim.fn.fnamemodify(vim.fn.getcwd(), ":p:h:t")
 local workspace_dir = "/home/lxj/Workspace/projects/" .. project_name
