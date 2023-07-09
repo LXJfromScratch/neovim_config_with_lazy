@@ -25,7 +25,7 @@ end
 local home = os.getenv("HOME")
 if home == "/root"
 then
-  MyColor('gruvbox')
-else
   MyColor('rose-pine')
+else
+  MyColor('gruvbox')
 end
