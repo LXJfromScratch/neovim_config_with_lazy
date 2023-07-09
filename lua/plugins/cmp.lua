@@ -1,7 +1,7 @@
 return {
   {
     "L3MON4D3/LuaSnip",
-    event = "InsertEnter",
+    -- event = "InsertEnter",
     dependencies = { "rafamadriz/friendly-snippets" },
     config = function(_, opts)
       if opts then require("luasnip").config.setup(opts) end
@@ -11,7 +11,6 @@ return {
   },
   {
     "hrsh7th/nvim-cmp",
-    event = "InsertEnter",
     dependencies = {
       "saadparwaiz1/cmp_luasnip",
       "hrsh7th/cmp-buffer",
@@ -19,6 +18,7 @@ return {
       "hrsh7th/cmp-nvim-lsp",
       "hrsh7th/cmp-calc",
     },
+    event = "InsertEnter",
     opts = function()
       local cmp = require "cmp"
       local snip_status_ok, luasnip = pcall(require, "luasnip")
