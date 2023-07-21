@@ -4,11 +4,11 @@ if root_dir == "" then
   return
 end
 
--- local home = os.getenv("HOME")
+local home = os.getenv("HOME")
 -- local workspace_dir = home .. "/Workspace/projects/" .. project_name
 local nvim_data = vim.fn.stdpath("data") .. '/'
 local project_name = vim.fn.fnamemodify(vim.fn.getcwd(), ":p:h:t")
-local workspace_dir = "/home/lxj/Workspace/projects/" .. project_name
+local workspace_dir = home .. "/Workspace/projects/" .. project_name
 local jdtls_dir = nvim_data .. "mason/packages/jdtls/"
 
 -- See `:help vim.lsp.start_client` for an overview of the supported `config` options.
@@ -35,7 +35,8 @@ local config = {
     "--add-opens",
     "java.base/java.lang=ALL-UNNAMED",
     "-jar",
-    jdtls_dir .. "plugins/org.eclipse.equinox.launcher_1.6.400.v20210924-0641.jar",
+--org.eclipse.equinox.launcher_1.6.500.v20230622-2056.jar
+    jdtls_dir .. "plugins/org.eclipse.equinox.launcher_1.6.500.v20230622-2056.jar",
     "-configuration",
     jdtls_dir .. "config_linux",
     "-data",
