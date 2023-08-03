@@ -17,6 +17,7 @@ return {
       "hrsh7th/cmp-path",
       "hrsh7th/cmp-nvim-lsp",
       "hrsh7th/cmp-calc",
+      "hrsh7th/cmp-nvim-lsp-signature-help",
     },
     event = "InsertEnter",
     opts = function()
@@ -88,11 +89,12 @@ return {
           end, { "i", "s" }),
         },
         sources = cmp.config.sources {
-          { name = "nvim_lsp", priority = 900 },
-          { name = "luasnip",  priority = 750 },
-          { name = "buffer",   priority = 500 },
-          { name = "path",     priority = 250 },
-          { name = "calc",     priority = 200 },
+          { name = "nvim_lsp",                priority = 900 },
+          { name = "luasnip",                 priority = 750 },
+          { name = "buffer",                  priority = 500 },
+          { name = "path",                    priority = 250 },
+          { name = "calc",                    priority = 200 },
+          { name = "nvim_lsp_signature_help", priority = 150 },
         },
       }
     end,
