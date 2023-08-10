@@ -15,9 +15,19 @@ return {
     {
       "nvim-telescope/telescope-file-browser.nvim",
     },
+    {
+      "ahmedkhalf/project.nvim",
+      config = function()
+        require("project_nvim").setup {
+          -- your configuration comes here
+          -- or leave it empty to use the default settings
+          -- refer to the configuration section below
+        }
+      end
+    },
 
   },
-  keys = {
+  keys = {--telescope
     { '<leader>sf', '<cmd>Telescope find_files<CR>',   mode = 'n', desc = 'Telescope [s]earch [f]iles' },
     { '<leader>sk', '<cmd>Telescope keymaps<CR>',      mode = 'n', desc = 'Telescope [s]earch [k]eymaps' },
     { '<leader>sg', '<cmd>Telescope live_grep<CR>',    mode = 'n', desc = 'Telescope [s]earch and [g]rep contents' },
@@ -32,9 +42,38 @@ return {
       mode = 'n',
       desc = 'Telescope [s]how [e]xplorer'
     },
+    {
+      '<leader>sp',
+      '<cmd>Telescope projects<CR>',
+      mode = 'n',
+      desc = 'Telescope [s]how [e]xplorer'
+    },
   },
   config = function()
     require('telescope').setup {
+      defaults = {
+        theme = 'ivy',
+        file_ignore_patterns = { "undodir/" },
+        -- layout_strategy = "horizontal",
+        -- layout_config = {
+        --   horizontal = {
+        --     width = 0.9,
+        --     height = 0.8,
+        --     prompt_position = "top",
+        --     preview_cutoff = 120,
+        --   },
+        -- },
+        -- sorting_strategy = "ascending",
+        mappings = {
+          n = {
+            ["q"] = require('telescope.actions').close,
+            ["<leader>e"] = require('telescope.actions').close
+          },
+          i = {
+            ["<leader>e"] = require('telescope.actions').close,
+          }
+        },
+      },
       extensions = {
         fzf = {
           fuzzy = true,                   -- false will only do exact matching
@@ -58,28 +97,6 @@ return {
         ["ui-select"] = {
           require("telescope.themes").get_dropdown {},
         },
-      },
-      defaults = {
-        file_ignore_patterns = { "undodir/" },
-        -- layout_strategy = "horizontal",
-        -- layout_config = {
-        --   horizontal = {
-        --     width = 0.9,
-        --     height = 0.8,
-        --     prompt_position = "top",
-        --     preview_cutoff = 120,
-        --   },
-        -- },
-        -- sorting_strategy = "ascending",
-        mappings = {
-          n = {
-            ["q"] = require('telescope.actions').close,
-            ["<leader>e"] = require('telescope.actions').close
-          },
-          i = {
-            ["<leader>e"] = require('telescope.actions').close
-          }
-        }
       },
       pickers = {
         find_files = {
@@ -108,6 +125,7 @@ return {
     require('telescope').load_extension('undo')
     -- require('telescope').load_extension('dap')
     require('telescope').load_extension('file_browser')
+    require('telescope').load_extension('projects')
     -- require("telescope").load_extension("ui-select")
   end
 }
