@@ -27,5 +27,5 @@ if home == "/root"
 then
   MyColor('rose-pine')
 else
-  MyColor('gruvbox')
+  MyColor('tokyonight-moon')
 end

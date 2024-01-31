@@ -1,6 +1,6 @@
 return {
   'nvim-telescope/telescope.nvim',
-  lazy = false,
+  lazy = true,
   dependencies = {
     'nvim-lua/plenary.nvim',
     'nvim-telescope/telescope-dap.nvim',
@@ -35,9 +35,9 @@ return {
     { '<leader>sh', '<cmd>Telescope help_tags<CR>',    mode = 'n', desc = 'Telescope [s]earch [h]elp documents' },
     { '<leader>so', '<cmd>Telescope oldfiles<CR>',     mode = 'n', desc = 'Telescope [s]earch [o]ld files' },
     { '<leader>su', '<cmd>Telescope undo<CR>',         mode = 'n', desc = 'Telescope [s]earch [u]ndo tree' },
-    { '<leader>e',  '<cmd>Telescope file_browser<CR>', mode = 'n', desc = 'Telescope [e]xplorer' },
+    { '<leader>se',  '<cmd>Telescope file_browser<CR>', mode = 'n', desc = 'Telescope [e]xplorer' },
     {
-      '<leader>se',
+      '<leader>e',
       '<cmd>Telescope file_browser path=%:p:h select_buffer=true<CR>',
       mode = 'n',
       desc = 'Telescope [s]how [e]xplorer'

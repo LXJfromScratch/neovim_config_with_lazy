@@ -13,7 +13,15 @@ return {
         comments = { italic = true },
       },
       on_colors = function(colors)
-        colors.comment = '#CAE1FF'
+        colors.comment = '#BFEFFF'
+        colors.cyan = '#00FFFF'
+        colors.fg = '#F8F8FF'
+        colors.green = '#C0FF3E'
+        colors.green1 = '#00FA9A'
+        colors.orange = '#FFA500'
+        colors.yellow = '#FFFF00'
+        colors.fg_dark = '#E0FFFF'
+        -- colors.blue = '#00BFFF'
       end
     }
   },
