@@ -6,7 +6,8 @@ return {
       transparent = true,
       terminal_colors = true,
       dim_inactive = false,
-      hide_inactive_statusline = false,
+      hide_inactive_statusline = true,
+      lualine_bold = true,
       styles = {
         sidebars = 'transparent',
         floats = 'transparent',
@@ -19,9 +20,15 @@ return {
         colors.green = '#C0FF3E'
         colors.green1 = '#00FA9A'
         colors.orange = '#FFA500'
-        colors.yellow = '#FFFF00'
+        colors.yellow = '#FFD700'
         colors.fg_dark = '#E0FFFF'
-        -- colors.blue = '#00BFFF'
+        colors.dark3 = '#98F5FF'
+        -- colors.fg_gutter = '#CD4F39' -- number line
+        colors.fg_gutter = '#EE5C42' -- number line
+        colors.bg_statusline = '#EE5C42'
+        -- colors.blue5 = '#00BFFF'
+        colors.fg_sidebar = '#000000'
+        colors.gitSigns = { add = "#00FF00", change = "#00FFFF", delete = "#FFFF00"}
       end
     }
   },
@@ -55,36 +62,4 @@ return {
       })
     end
   },
-  {
-    'EdenEast/nightfox.nvim',
-    lazy = true,
-    config = function()
-      require('nightfox').setup({
-        options = {
-          transparent = true,
-          terminal_colors = true,
-        }
-      })
-    end
-  },
-  {
-    "catppuccin/nvim",
-    name = "catppuccin",
-    lazy = true,
-    opts = {
-      flavour = "mocha",          -- latte, frappe, macchiato, mocha
-      transparent_background = true,
-      show_end_of_buffer = false, -- show the '~' characters after the end of buffers
-      term_colors = true,
-      integrations = {
-        cmp = true,
-        gitsigns = true,
-        nvimtree = true,
-        telescope = true,
-        notify = false,
-        mini = false,
-        -- For more plugins integrations please scroll down (https://github.com/catppuccin/nvim#integrations)
-      },
-    }
-  }
 }
