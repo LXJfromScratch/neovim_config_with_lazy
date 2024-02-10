@@ -17,15 +17,23 @@ require('lazy').setup({
   import = 'plugins',
 })
 
+vim.diagnostic.config({
+  signs = { text = { [vim.diagnostic.severity.ERROR] = 'Y', } }
+})
+
 function MyColor(color)
-  color = color or 'tokyonight-moon'
+  color = color or 'catppuccin-mocha'
   vim.cmd.colorscheme(color)
 end
 
-local home = os.getenv("HOME")
+MyColor()
+-- MyColor('github_dark_high_contrast')
+
+--[[ local home = os.getenv("HOME")
 if home == "/root"
 then
   MyColor('rose-pine')
 else
-  MyColor('tokyonight-moon')
-end
+  MyColor('catppuccin-mocha')
+end ]]
+

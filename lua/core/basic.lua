@@ -39,6 +39,8 @@ set.undofile = true
 set.termguicolors = true
 set.signcolumn = 'yes'
 
+set.conceallevel = 2
+
 -- Fold Code
 -- set.foldmethod = "expr"
 -- set.foldexpr = "nvim_treesitter#foldexpr()"

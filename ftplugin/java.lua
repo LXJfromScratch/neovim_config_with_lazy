@@ -9,7 +9,7 @@ local nvim_data = vim.fn.stdpath("data") .. '/'
 local project_name = vim.fn.fnamemodify(vim.fn.getcwd(), ":p:h:t")
 local workspace_dir = home .. "/Workspace/projects/" .. project_name
 local jdtls_dir = nvim_data .. "mason/packages/jdtls/"
-local jar_path = os.execute('find ~/.local/share/nvim/mason/packages/jdtls/plugins -name "org.eclipse.equinox.launcher_*.jar"')
+-- local jar_path = os.execute('find ~/.local/share/nvim/mason/packages/jdtls/plugins -name "org.eclipse.equinox.launcher_*.jar"')
 
 -- See `:help vim.lsp.start_client` for an overview of the supported `config` options.
 local bundles = {
