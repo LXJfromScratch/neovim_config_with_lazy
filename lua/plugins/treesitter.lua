@@ -1,7 +1,7 @@
 return {
   {
     'p00f/nvim-ts-rainbow',
-    event = 'LspAttach',
+    -- event = 'LspAttach',
     dependencies = { 'nvim-treesitter/nvim-treesitter', },
   },
   {
@@ -10,16 +10,12 @@ return {
     priority = 1000,
     config = function()
       require 'nvim-treesitter.configs'.setup {
-        ensure_installed = { "rust", "c", "lua", "bash", "javascript", "cpp", "java", "json", "vim", "query", "markdown",
-          "markdown_inline", "html" },
+        ensure_installed = { "rust", "c", "lua", "bash", "javascript", "cpp", "java", "json", "vim", "query", "markdown","markdown_inline", "html" },
         auto_install = true,
-
         autopair = {
           enable = true,
         },
-
         ignore_install = { "" },
-
         highlight = {
           enable = false,
 
