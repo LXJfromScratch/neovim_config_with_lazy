@@ -1,7 +1,7 @@
 return {
   {
     "L3MON4D3/LuaSnip",
-    -- event = "InsertEnter",
+    event = "InsertEnter",
     dependencies = { "rafamadriz/friendly-snippets" },
     config = function(_, opts)
       if opts then require("luasnip").config.setup(opts) end

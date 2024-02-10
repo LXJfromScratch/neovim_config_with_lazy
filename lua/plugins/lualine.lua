@@ -6,7 +6,6 @@ return {
       options = {
         theme = 'auto',
         globalstatus = true,
-
       }
     }
   end
