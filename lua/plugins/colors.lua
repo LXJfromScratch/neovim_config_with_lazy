@@ -37,19 +37,25 @@ return {
     'rose-pine/neovim',
     name = 'rose-pine',
     opts = {
-      disable_background = true,
-      disable_float_background = true,
+      -- disable_background = true,
+      -- disable_float_background = true,
+      styles = {
+        bold = true,
+        italic = true,
+        transparency = true,
+      },
     }
   }, ]]
-  --[[ {
+  {
     "ellisonleao/gruvbox.nvim",
-    lazy = true,
+    -- lazy = true,
+    priority = 1500,
     opts = {
       transparent_mode = true,
       bold = true,
       contrast = 'hard',
     },
-  }, ]]
+  },
   --[[ {
     'projekt0n/github-nvim-theme',
     lazy = true,
