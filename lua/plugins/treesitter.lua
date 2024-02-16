@@ -6,8 +6,8 @@ return {
   },
   {
     'nvim-treesitter/nvim-treesitter',
-    lazy = false,
-    priority = 1000,
+    -- lazy = false,
+    priority = 1500,
     config = function()
       require 'nvim-treesitter.configs'.setup {
         ensure_installed = { "rust", "c", "lua", "bash", "javascript", "cpp", "java", "json", "vim", "query", "markdown","markdown_inline", "html" },

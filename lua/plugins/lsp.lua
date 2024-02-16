@@ -8,7 +8,10 @@ return {
   },
   config = function()
     local langs = { "pyright", "lua_ls", "bashls", "html", "marksman", "clangd", "sqlls", "vimls", --[[ "gopls" ]] }
-    local capabilities = require('cmp_nvim_lsp').default_capabilities()
+
+    local capabilities = vim.lsp.protocol.make_client_capabilities()
+    capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
+
     require("mason").setup({
       ui = {
         icons = {

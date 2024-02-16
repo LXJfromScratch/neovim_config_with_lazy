@@ -17,16 +17,12 @@ require('lazy').setup({
   import = 'plugins',
 })
 
---[[ vim.diagnostic.config({
-  signs = { text = { [vim.diagnostic.severity.ERROR] = 'Y', } }
-}) ]]
-
 function MyColor(color)
-  color = color or 'catppuccin-mocha'
+  color = color or 'tokyonight-moon'
   vim.cmd.colorscheme(color)
 end
 
-MyColor('gruvbox')
+MyColor()
 -- MyColor('github_dark_high_contrast')
 
 --[[ local home = os.getenv("HOME")

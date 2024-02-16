@@ -1,7 +1,7 @@
 return {
-  --[[ {
+  {
     'folke/tokyonight.nvim',
-    priority = 1000,
+    priority = 1200,
     opts = {
       transparent = true,
       terminal_colors = true,
@@ -25,14 +25,14 @@ return {
         colors.fg_dark = '#E0FFFF'
         colors.dark3 = '#98F5FF'
         colors.fg_gutter = '#EE5C42' -- number line
-        colors.bg_statusline = '#EE5C42'
+        -- colors.bg_statusline = '#FE5C42'
         colors.blue1 = '#00F5FF'     -- Java variable color
         colors.blue = '#00BFFF'      -- Java function color
         colors.fg_sidebar = '#000000'
-        colors.gitSigns = { add = "#00FF00", change = "#00FFFF", delete = "#FFFF00" }
+        colors.gitSigns = { add = "#00FF00", change = "#00FFFF", delete = "#FE5C42" }
       end
     }
-  }, ]]
+  },
   --[[ {
     'rose-pine/neovim',
     name = 'rose-pine',
@@ -46,16 +46,16 @@ return {
       },
     }
   }, ]]
-  {
+  --[[ {
     "ellisonleao/gruvbox.nvim",
-    -- lazy = true,
+    lazy = true,
     priority = 1500,
     opts = {
       transparent_mode = true,
       bold = true,
       contrast = 'hard',
     },
-  },
+  }, ]]
   --[[ {
     'projekt0n/github-nvim-theme',
     lazy = true,
@@ -76,7 +76,9 @@ return {
   {
     "catppuccin/nvim",
     name = "catppuccin",
-    priority = 1000,
+    -- lazy = true,
+    -- priority = 1000,
+    event = "ColorScheme",
     opts = {
       transparent_background = true,
       term_colors = true,
@@ -86,14 +88,14 @@ return {
         cmp = true,
         dap_ui = true,
         gitsigns = true,
-        leap = true,
         mason = true,
+        flash = true,
         treesitter = true,
         lsp_saga = true,
       },
       color_overrides = {
         all = {
-          overlay0 = "#B5B5B5" -- Comments
+          overlay0 = "#DCDCDC" -- Comments
         }
       }
     }

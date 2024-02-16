@@ -1,6 +1,7 @@
 return {
   'nvimdev/lspsaga.nvim',
-  event = 'LspAttach',
+  -- event = 'LspAttach',
+  event = "VeryLazy",
   dependencies = {
     'nvim-treesitter/nvim-treesitter',
     'nvim-tree/nvim-web-devicons',
@@ -15,10 +16,10 @@ return {
         -- win_width = 35,
       },
       finder = {
-        default = 'def+ref+imp',
+        default = 'def+ref+imp+tyd',
       },
       diagnostic = {
-        max_height = 0.8,
+        max_height = 0.6,
         keys = {
           quit = { 'q', '<ESC>' }
         }
@@ -28,8 +29,16 @@ return {
           quit = { 'q', '<ESC>' }
         }
       },
+      rename = {
+        in_select = false,
+        keys = {
+          quit = { '<ESC>' }
+        }
+      },
+      lightbulb = {
+        enable = true,
+      }
     })
-
 
     vim.diagnostic.config({
       virtual_text = false,
@@ -75,6 +84,7 @@ return {
         maplsp('n', '<leader>wr', vim.lsp.buf.remove_workspace_folder, optbuf)
         maplsp('n', '<leader>wl', function() print(vim.inspect(vim.lsp.buf.list_workspace_folders())) end, optbuf)
         maplsp('n', '<leader>rn', '<cmd>Lspsaga rename<cr>', optbuf)
+        maplsp('n', '<space>rf', vim.lsp.buf.rename, optbuf)
         maplsp('n', '<leader>ca', '<cmd>Lspsaga code_action<cr>', optbuf)
         maplsp('n', '<leader>=', function() vim.lsp.buf.format { async = true } end, optbuf)
       end,
