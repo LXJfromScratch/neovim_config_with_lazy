@@ -23,7 +23,6 @@ function MyColor(color)
 end
 
 MyColor()
--- MyColor('github_dark_high_contrast')
 
 --[[ local home = os.getenv("HOME")
 if home == "/root"

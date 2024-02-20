@@ -33,9 +33,13 @@ return {
       end
     }
   },
-  --[[ {
+  {
     'rose-pine/neovim',
     name = 'rose-pine',
+    lazy = true,
+    keys = {
+      { '<leader>cs', '<cmd>Telescope colorscheme<CR>', mode = 'n', desc = 'Telescope [c]olor [s]elect' },
+    },
     opts = {
       -- disable_background = true,
       -- disable_float_background = true,
@@ -45,20 +49,26 @@ return {
         transparency = true,
       },
     }
-  }, ]]
-  --[[ {
+  },
+  {
     "ellisonleao/gruvbox.nvim",
     lazy = true,
     priority = 1500,
+    keys = {
+      { '<leader>cs', '<cmd>Telescope colorscheme<CR>', mode = 'n', desc = 'Telescope [c]olor [s]elect' },
+    },
     opts = {
       transparent_mode = true,
       bold = true,
       contrast = 'hard',
     },
-  }, ]]
-  --[[ {
+  },
+  {
     'projekt0n/github-nvim-theme',
     lazy = true,
+    keys = {
+      { '<leader>cs', '<cmd>Telescope colorscheme<CR>', mode = 'n', desc = 'Telescope [c]olor [s]elect' },
+    },
     config = function()
       require('github-theme').setup({
         options = {
@@ -72,12 +82,10 @@ return {
         },
       })
     end
-  }, ]]
+  },
   {
     "catppuccin/nvim",
     name = "catppuccin",
-    -- lazy = true,
-    -- priority = 1000,
     event = "ColorScheme",
     opts = {
       transparent_background = true,

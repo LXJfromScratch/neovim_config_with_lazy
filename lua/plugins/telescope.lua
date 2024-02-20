@@ -75,11 +75,13 @@ return {
       { '<leader>sb', '<cmd>Telescope buffers<CR>',    mode = 'n', desc = 'Telescope [s]earch [b]uffers' },
       { '<leader>sh', '<cmd>Telescope help_tags<CR>',  mode = 'n', desc = 'Telescope [s]earch [h]elp documents' },
       { '<leader>so', '<cmd>Telescope oldfiles<CR>',   mode = 'n', desc = 'Telescope [s]earch [o]ld files' },
+      { '<leader>sc', '<cmd>Telescope commands<CR>',   mode = 'n', desc = 'Telescope [s]earch [c]ommands' },
+      { '<leader>bp', '<cmd>Telescope builtin<CR>',   mode = 'n', desc = 'Telescope [b]uiltin [p]ickers' },
+      { '<leader>cs', '<cmd>Telescope colorscheme<CR>', mode = 'n', desc = 'Telescope [c]olor [s]elect' },
     },
     config = function()
       require('telescope').setup {
         defaults = {
-          -- theme = 'ivy',
           file_ignore_patterns = { "undodir/" },
           mappings = {
             n = {
@@ -93,7 +95,7 @@ return {
           sorting_strategy = "ascending",
           layout_strategy = "bottom_pane",
           layout_config = {
-            height = 25,
+            height = 30,
           },
           border = true,
           borderchars = {

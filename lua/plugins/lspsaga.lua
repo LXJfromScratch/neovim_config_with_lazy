@@ -37,6 +37,11 @@ return {
       },
       lightbulb = {
         enable = true,
+      },
+      symbol_in_winbar = {
+        enable = false,
+        folder_level = 0,
+        delay = 200
       }
     })
 
