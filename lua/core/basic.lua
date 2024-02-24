@@ -10,6 +10,7 @@ set.encoding = 'utf-8'
 set.fileencoding = 'utf-8'
 
 set.mouse = 'a'
+set.mousemoveevent = true
 set.cursorline = false
 set.wrap = false
 --set.scroll = 8

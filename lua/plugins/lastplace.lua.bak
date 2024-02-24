@@ -1,5 +1,7 @@
 return {
   'ethanholz/nvim-lastplace',
+  lazy = true,
+  -- event = "BufAdd",
   config = function()
     require 'nvim-lastplace'.setup {}
   end
