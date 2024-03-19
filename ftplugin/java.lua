@@ -7,7 +7,7 @@ end
 local home = os.getenv("HOME")
 local nvim_data = vim.fn.stdpath("data") .. '/'
 local project_name = vim.fn.fnamemodify(vim.fn.getcwd(), ":p:h:t")
-local workspace_dir = home .. "/Workspace/projects/" .. project_name
+local workspace_dir = home .. "/Workspace/Runtimes/" .. project_name
 local jdtls_dir = nvim_data .. "mason/packages/jdtls/"
 -- local jar_path = os.execute('find ~/.local/share/nvim/mason/packages/jdtls/plugins -name "org.eclipse.equinox.launcher_*.jar"')
 

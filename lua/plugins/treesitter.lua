@@ -18,7 +18,6 @@ return {
         ignore_install = { "" },
         highlight = {
           enable = false,
-
           additional_vim_regex_highlighting = false,
         },
         rainbow = {

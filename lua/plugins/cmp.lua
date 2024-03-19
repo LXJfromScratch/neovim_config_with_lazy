@@ -1,7 +1,9 @@
 return {
   {
     "L3MON4D3/LuaSnip",
-    event = "InsertEnter",
+    version = "v2.*",
+    build = "make install_jsregexp",
+    event = "VeryLazy",
     dependencies = { "rafamadriz/friendly-snippets" },
     config = function(_, opts)
       if opts then require("luasnip").config.setup(opts) end
