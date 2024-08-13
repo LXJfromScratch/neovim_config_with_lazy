@@ -9,6 +9,9 @@ return {
       css = {
         mode = 'foreground'
       },
+      conf = {
+        mode = 'foreground'
+      },
       toml = {
         mode = 'foreground'
       },
